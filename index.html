@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<style>
+/* CSS for Markstat 2.0 using Pandoc 2.0 */
+body{padding:14px 28px;}
+body, table {font-family: Helvetica, Arial, Sans-serif; font-size: 14px;}
+h1, h2, h3, h4 {font-weight: normal; color: #3366cc}
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 120%;}
+h4 {font-size: 100%; font-weight:bold}
+img.center {display:block; margin-left:auto; margin-right:auto}
+.small{font-size:8pt;}
+a {color: black;}
+a:visited {color: #808080;}
+a.plain {text-decoration:none;}
+a.plain:hover {text-decoration:underline;}
+.em {font-weight:bold;}
+pre, code {font-family: "lucida console", monospace;}
+pre.stata {font-size:13px; line-height:13px;}
+pre {padding:8px; border:1px solid #c0c0c0; border-radius:8px; background-color:#fdfdfd;}
+code {color:#3366cc; background-color:#fafafa;}
+pre code { color:black; background-color:white}
+/* Added for Pandoc */
+figure > img, div.figure > img {display:block; margin:auto}
+figcaption, p.caption {text-align:center; font-weight:bold; color:#3366cc;}
+h1.title {text-align:center; margin-bottom:0}
+p.author, h2.author {font-style:italic; text-align:center;margin-top:4px;margin-bottom:0}
+p.date, h3.date {text-align:center;margin-top:4px; margin-bottom:0}
+/* Tables*/
+table { margin:auto; border-collapse:collapse; }
+table caption { margin-bottom:1ex;}
+th, td { padding:4px 6px;}
+thead tr:first-child th {border-top:1px solid black; padding-top:6px}
+thead tr:last-child  th {padding-bottom:6px}
+tbody tr:first-child td {border-top:1px solid black; padding-top:6px}
+tbody tr:last-child  td {padding-bottom:6px;}
+table tbody:last-child tr:last-child td {border-bottom:1px solid black;}
+</style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ensino-distancia-relatorio</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p align="center">
+<img src="templates/thumbnail.png" style="width:50.0%" />
+</p>
+<p align="center">
+<span style="font-family:helvet; font-size:4em;"> <strong>Ensino a Distância: </strong>
+</p>
+<p align="center">
+<span style="font-family:helvet; font-size:4em;"> <strong>Questionário a Professores</strong>
+</p>
+<p align="center">
+<span style="font-family:helvet; font-size:2em;"> 8 de abril de 2020
+</p>
+<hr />
+
+<h2 id="introdução">Introdução</h2>
+<p>A atual pandemia de Covid-19 obrigou ao fecho de escolas e outras instituições de ensino em todo o país.<br />
+Professores e alunos têm migrado as suas aulas e interações para soluções de ensino a distância, nomeadamente através de plataformas online. Esta é uma experiência inédita na realidade portuguesa que interessa acompanhar.<br />
+O <a href="https://economicsofeducationatnovasbe.wordpress.com/">Centro de Economia da Educação da Universidade Nova de Lisboa</a> encontra-se a recolher, desde o dia 25 de Março, um <a href="https://bit.ly/2J9WKir">inquérito online</a> junto de professores e educadores dos ensinos pré-escolar, básico e secundário, no qual aferimos como tem decorrido esta experiência.<br />
+Até ao dia 7 de abril de 2020 foram recolhidos um total de <strong>1586</strong> inquéritos válidos. Estimamos que mais de 1 em cada 100 professores portugueses tenham já respondido ao questionário.</p>
+<h2 id="respostas-por-tipo-e-nível-de-ensino">Respostas por tipo e nível de ensino</h2>
+
+<p>A grande maioria das respostas, 79%, foi recolhida junto de professores do ensino público.</p>
+<figure>
+<img src="scratch/pub_priv.png" alt="Distribuição por tipo de ensino" style="width:50.0%" /><figcaption>Distribuição por tipo de ensino</figcaption>
+</figure>
+<p>Cerca de 4 em cada 10 dos professores de escolas públicas que responderam dão aulas a alunos do 3º ciclo do ensino básico.<br />
+Por outro lado, mais de metade dos inquiridos que têm contratos com escolas privadas lecionam no ensino secundário.</p>
+<figure>
+<img src="scratch/ciclos.png" alt="Distribuição dos professores por tipo e níveis de ensino" style="width:50.0%" /><figcaption>Distribuição dos professores por tipo e níveis de ensino</figcaption>
+</figure>
+<h2 id="alunos-sem-computador-com-acesso-a-internet">Alunos sem computador com acesso a internet - por ciclo e tipo de ensino</h2>
+
+<p>Entre os professores inquiridos reportaram que, em média, 23% dos alunos não têm acesso a computador com internet em casa.<br />
+Este valor é superior ao reportado pelo <a href="">INE</a> em Novembro último, baseado numa amostra representativa da população portuguesa (5.5% das famílias com crianças até aos 15 anos).</p>
+<figure>
+<img src="scratch/sem-internet.png" alt="Proporção de alunos sem computador com acesso a internet" style="width:50.0%" /><figcaption>Proporção de alunos sem computador com acesso a internet</figcaption>
+</figure>
+<h3 id="alunos-sem-computador-com-acesso-a-internet---por-ciclo-e-tipo-de-ensino">Alunos sem computador com acesso a internet - por ciclo e tipo de ensino</h3>
+
+<p>Em média, os professores que dão aulas em escolas privadas reportam uma menor percentagem de alunos sem computador com acesso à internet. <br />
+<br />
+É nos níveis de ensino inciais que o diferencial entre escolas públicas e privadas é maior. Por exemplo, no 1º ciclo do ensino público a média da percentagem de alunos sem computador com acesso a internet é de 31%, enquanto que em escolas privadas este valor cai para 10%</p>
+<figure>
+<img src="scratch/sem-internet_1+2.png" alt="Proporção de alunos sem computador com acesso a internet, 1º e 2º ciclos" style="width:50.0%" /><figcaption>Proporção de alunos sem computador com acesso a internet, 1º e 2º ciclos</figcaption>
+</figure>
+<figure>
+<img src="scratch/sem-internet_3+4.png" alt="Proporção de alunos sem computador com acesso a internet, 3º ciclo e Secundário" style="width:50.0%" /><figcaption>Proporção de alunos sem computador com acesso a internet, 3º ciclo e Secundário</figcaption>
+</figure>
+<h2 id="estratégias-de-ensino-a-distância">Estratégias de ensino a distância</h2>
+
+<p>A estratégia mais adotada pelos professores inquiridos é o envio de materiais complementares ao estudo, 85%, como fichas individuais de trabalho e trabalhos de grupo. <br />
+<br />
+Quase 3/4 dos inquiridos afirma esclarecer as dúvidas dos seus alunos a distância.<br />
+<br />
+Apenas 30% dos professores inquiridos dá aulas por videoconferência, e 12% reportam disponibilizarem vídeos gravados pelos próprios.<br />
+<br />
+Apenas uma pequena fração dos professores inquiridos, 2%, reportam não ter desenvolvido ainda quaisquer estratégias de ensino a distância.</p>
+<figure>
+<img src="scratch/estrategias.png" alt="Estrategias de ensino a distância" style="width:50.0%" /><figcaption>Estrategias de ensino a distância</figcaption>
+</figure>
+<h3 id="estratégias-de-ensino-a-distância---por-tipo-de-ensino">Estratégias de ensino a distância - por tipo de ensino</h3>
+
+<br />
+Entre escolas privadas e públicas as maiores diferenças são observadas no recurso a aulas por videoconferência ou gravação de vídeos.<br />
+<br />
+No ensino secundário, 67% dos professores de escolas privadas reportam estar a lecionar aulas por videoconferência, sendo que este valor cai para 34% no caso de professores de escolas públicas.<br />
+<br />
+No ensino secundário, 21% dos professores das escolas privadas reportam disponibilizar vídeos gravados pelo próprio, sendo esta percentagem de 9% entre professores de escolas públicas.
+</p>
+<figure>
+<img src="scratch/estrategias_pubpriv.png" alt="Estrategias de ensino a distância" style="width:50.0%" /><figcaption>Estrategias de ensino a distância</figcaption>
+</figure>
+<h2 id="elementos-de-avalição-recolhidos">Elementos de avalição recolhidos</h2>
+
+<p>A grande maioria dos inquiridos, cerca de 71%, refere recorrer à avaliação de trabalhos de casa enviados aos alunos.<br />
+<br />
+Apenas 1 em cada 4 professores afirma ter recorrido ou planeia recorrer a testes como meio de avaliação da matéria lecionada por ensino a distância.<br />
+<br />
+Ambos estes meios de avaliação têm sido utilizados em detrimento de outros, tais como a avaliação da assiduidade ou a participação em aulas através de videoconferência.<br />
+<br />
+Cerca de 2% dos professores afirma não estar a recolher quaisquer elementos de avaliação.</p>
+<figure>
+<img src="scratch/avaliacao.png" alt="Elementos de avaliação recolhidos pelos professores" style="width:50.0%" /><figcaption>Elementos de avaliação recolhidos pelos professores</figcaption>
+</figure>
+<h3 id="elementos-de-avalição-recolhidos---por-tipo-e-ciclo-de-ensino">Elementos de avalição recolhidos - por tipo e ciclo de ensino</h3>
+
+<p>Em todos os ciclos de ensino, os professores recorrem predominante aos trabalhos de casa como instrumento de avaliação.<br />
+<br />
+Nas escolas privadas, 33% dos professores registam a assiduidade das aulas online, e 39% recolhem informação acerca da participação nestas mesmas aulas.<br />
+Estes valores caem nas escolas públicas para 9% e 14%, respetivamente.</p>
+<figure>
+<img src="scratch/evals_pubpriv.png" alt="Elementos de avaliação recolhidos pelos professores, 1º ciclo" style="width:50.0%" /><figcaption>Elementos de avaliação recolhidos pelos professores, 1º ciclo</figcaption>
+</figure>
+<h2 id="utilização-dos-recursos-da-dge">Utilização dos recursos da DGE</h2>
+
+<p>Cerca de 77% dos professores inquiridos não estão utilizar os recursos disponibilizados pela <a href="https://apoioescolas.dge.mec.pt/">Direção Geral de Educação</a> (DGE).</p>
+<figure>
+<img src="scratch/recursos_dge.png" alt="Professores que utilizam recursos disponibilizados pela DGE" style="width:50.0%" /><figcaption>Professores que utilizam recursos disponibilizados pela DGE</figcaption>
+</figure>
+<p><br />
+</p>
+<h2 id="avaliação-da-adaptação-à-realidade-de-ensino-a-distância">Avaliação da adaptação à realidade de ensino a distância</h2>
+
+<p>Os professores avaliaram também a sua adesão e adaptação a esta nova realidade, bem como aquela dos seus alunos e dos encarregados de educação.<br />
+<br />
+Tal foi avaliado numa escala crescente, de 1 a 7.<br />
+<br />
+Em média, os professores classificaram a sua adesão e adaptação em 5.32.<br />
+<br />
+Em média os professores classificaram a adesão e adaptação dos seus alunos em 4.54.<br />
+<br />
+Em média os professores classificaram a adesão e adaptação dos encarregados de educação em 4.13.<br />
+</p>
+<figure>
+<img src="scratch/adapt_prof.png" alt="Avaliação da adaptação dos próprios" style="width:50.0%" /><figcaption>Avaliação da adaptação dos próprios</figcaption>
+</figure>
+<figure>
+<img src="scratch/adapt_alunos.png" alt="Avaliação da adaptação dos alunos" style="width:50.0%" /><figcaption>Avaliação da adaptação dos alunos</figcaption>
+</figure>
+<figure>
+<img src="scratch/adapt_ee.png" alt="Avaliação da adaptação dos encarregados de educação" style="width:50.0%" /><figcaption>Avaliação da adaptação dos encarregados de educação</figcaption>
+</figure>
+<h2 id="distribuição-geográfica-das-respostas">Distribuição geográfica das respostas</h2>
+<p>As respostas encontram-se distribuídas um pouco por todo o território continental e ilhas com maior incidência nas zonas litorais, nomeadamente, em Lisboa, Setúbal, Porto e Algarve, o que reflete também a maior densidade populacional dessas zonas geográficas.</p>
+<figure>
+<img src="scratch/respostas_concelho.png" alt="Número de inquéritos respondidos por concelho" style="width:80.0%" /><figcaption>Número de inquéritos respondidos por concelho</figcaption>
+</figure>
+<p><br />
+<br />
+Os resultados deste inquérito continuarão a ser reportados.<br />
+Todos os educadores e professores do ensino básico que queiram participar neste estudo, podem fazê-lo através do link: <a href="https://bit.ly/2J9WKir" class="uri">https://bit.ly/2J9WKir</a>.<br />
+Qualquer questão poderá ser colcoada através do e-mail: economicsofeducation@novasbe.pt.<br />
+Investigadores Responsáveis: Pedro Freitas, Gonçalo Lima, Ana Balcão Reis e Luís Catela Nunes</p>
+</body>
+</html>
